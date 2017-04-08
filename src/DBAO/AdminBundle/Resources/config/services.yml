@@ -1,0 +1,7 @@
+parameters:
+#    dbao_admin.example.class: DBAO\AdminBundle\Example
+
+services:
+#    dbao_admin.example:
+#        class: %dbao_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

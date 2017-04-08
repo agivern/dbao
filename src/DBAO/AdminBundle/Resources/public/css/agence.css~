@@ -1,0 +1,102 @@
+/*****************************************************/
+/***** CSS de l'agence du site d'administration de DBAO *****/
+/*****************************************************/
+
+/******************************************************/
+/* liste des rubriques modifiables du site DBAO */
+/******************************************************/
+
+#titre_rubrique
+{
+    margin-top: 70px;
+    font-size: 34px;
+    color: #acec11;
+    margin-bottom: 40px;
+    height: 56px;
+    line-height: 10px;
+}
+
+.perso {
+    float: left;
+    width: 515px;
+}
+
+.name {
+    width: 250px;
+    float: right;
+}
+
+.nomPerso {
+    font-family: Arial;
+    font-size: 22px;
+    color: black;
+    line-height: 0px;
+}
+
+.statutPerso {
+    font-family: Arial;
+    font-weight: bold;
+    color: #9bdb0e;
+    line-height: 0px;
+}
+
+.fonctionPerso {
+    font-family: Arial;
+    color: #818181;
+    font-size: 12px;
+    line-height: 0px;
+}
+
+.imagePerso {
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+.phrasePerso {
+    font-family: Arial;
+    color: #818181;
+    font-size: 12px;
+    width: 250px;
+    float: right;
+}
+
+/******************************************************/
+/* Liens d'accès */
+/******************************************************/
+
+#lien_acces
+{
+    display: inline-block;
+    border-bottom: 1px solid #c1c1c1;
+    padding-left: 10px;
+    width: 240px;
+    margin-right: 10px;
+    font-weight: normal;
+    vertical-align: middle;
+    height: 22px;
+    text-decoration: none;
+    color: #7c7c7c;
+    float: right;
+}
+
+#lien_acces p
+{
+    color: #7bff00;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    display: inline;
+    transition: font-size 0.25s, padding-left 0.25s;
+}
+
+#lien_acces:hover p
+{
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+#lien_acces:hover
+{
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - realisation{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/realisations.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div id="titre_rubrique">REALISATION</div>
+
+    {% set i = 0 %}
+    {% for r in realisation %}
+        {% set i = i + 1 %}
+        {% if i % 4 == 0 %}
+            <div id="realisation" style="margin-right: 0px;">
+                <img id="image" src="/dbao_light_site/web/uploads/documents/{{ r.url }}"></img>
+                <div id="realtitre">
+                    {{ r.titre }}
+                </div>
+                <form action="{{ path('dbao_admin_realisations_update', {'id': r.id}) }}" method="post">
+                    <input type="text" name="form_id" value="{{ r.emplacement }}"/>
+                    <input type="submit">
+                </form>
+                <form action="{{ path('dbao_admin_realisations_updateFirst', {'id': r.id}) }}" method="post">
+                    Première page ?<input type="checkbox" name="form_first" {% if r.first == true %} checked {% endif %}/>
+                    <input type="submit">
+                </form>
+                <a id="lien_acces" href="{{ path('dbao_admin_realisations_modification', {'id': r.id}) }}">Contenu <p>></p></a>
+                <a id="lien_acces" href="{{ path('dbao_admin_realisations_supprimer', {'id': r.id}) }}" onclick="return confirm('Etes vous sûre de vouloir supprimer cet élément ?');">Supprimer <p>></p></a>
+            </div>
+        {% else %}
+            <div id="realisation">
+                <img id="image" src="/dbao_light_site/web/uploads/documents/{{ r.url }}"></img>
+                <div id="realtitre">
+                    {{ r.titre }}
+                </div>
+                <form action="{{ path('dbao_admin_realisations_update', {'id': r.id}) }}" method="post">
+                    <input type="text" name="form_id" value="{{ r.emplacement }}"/>
+                    <input type="submit">
+                </form>
+                <form action="{{ path('dbao_admin_realisations_updateFirst', {'id': r.id}) }}" method="post">
+                    Première page ?<input type="checkbox" name="form_first" {% if r.first == true %} checked {% endif %}/>
+                    <input type="submit">
+                </form>
+                <a id="lien_acces" href="{{ path('dbao_admin_realisations_modification', {'id': r.id}) }}">Contenu <p>></p></a>
+                <a id="lien_acces" href="{{ path('dbao_admin_realisations_supprimer', {'id': r.id}) }}" onclick="return confirm('Etes vous sûre de vouloir supprimer cet élément ?');">Supprimer <p>></p></a>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <div class="clear"></div>
+    <center><a href="{{ path('dbao_admin_realisations_edition') }}"> Ajouter une réalisation </a></center>
+{% endblock %}
+

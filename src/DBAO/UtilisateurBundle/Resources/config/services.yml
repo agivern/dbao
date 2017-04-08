@@ -1,0 +1,7 @@
+parameters:
+#    dbao_utilisateur.example.class: DBAO\UtilisateurBundle\Example
+
+services:
+#    dbao_utilisateur.example:
+#        class: %dbao_utilisateur.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

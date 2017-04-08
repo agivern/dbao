@@ -1,0 +1,139 @@
+dbao_admin_homepage:
+    pattern:  /index
+    defaults: { _controller: DBAOAdminBundle:Default:index }
+
+dbao_admin_agence:
+    pattern:  /agence
+    defaults: { _controller: DBAOAdminBundle:Agence:index }
+
+dbao_admin_agence_add_personnel:
+    pattern:  /agence/addPerso
+    defaults: { _controller: DBAOAdminBundle:Agence:addPerso }
+
+dbao_admin_agence_supprimer:
+    pattern:  /agence/deletePerso
+    defaults: { _controller: DBAOAdminBundle:Agence:supprimerPerso }
+
+dbao_admin_news:
+    pattern:  /news
+    defaults: { _controller: DBAOAdminBundle:News:index }
+
+dbao_admin_news_edition:
+    pattern:  /news/edition
+    defaults: { _controller: DBAOAdminBundle:News:edition }
+
+dbao_admin_news_modifier:
+    pattern:  /news/modifier/{id}
+    defaults: { _controller: DBAOAdminBundle:News:modifier }
+
+dbao_admin_news_modifierImage:
+    pattern:  /news/image/{id}
+    defaults: { _controller: DBAOAdminBundle:News:modifierImage }
+
+dbao_admin_news_updateImages:
+    pattern:  /news/update/contenu/{id}/{retour}
+    defaults: { _controller: DBAOAdminBundle:News:updateImage }
+
+dbao_admin_news_supprimerImages:
+    pattern:  /news/delete/contenu/{id}/{retour}
+    defaults: { _controller: DBAOAdminBundle:News:deleteImage }
+
+dbao_admin_news_supprimer:
+    pattern:  /news/delete/{id}
+    defaults: { _controller: DBAOAdminBundle:News:supprimer }
+
+dbao_admin_news_modifierUp:
+    pattern:  /news/modifier/update/{id}
+    defaults: { _controller: DBAOAdminBundle:News:modifierUpdate }
+
+dbao_admin_slider:
+    pattern:  /slider
+    defaults: { _controller: DBAOAdminBundle:Slider:index }
+
+dbao_admin_slider_edition:
+    pattern:  /slider/edition
+    defaults: { _controller: DBAOAdminBundle:Slider:edition }
+
+dbao_admin_slider_delete:
+    pattern:  /slider/delete/{id}
+    defaults: { _controller: DBAOAdminBundle:Slider:delete }
+
+dbao_admin_slider_update:
+    pattern:  /slider/update/{id}
+    defaults: { _controller: DBAOAdminBundle:Slider:update }
+
+dbao_admin_realisations:
+    pattern:  /realisations
+    defaults: { _controller: DBAOAdminBundle:Realisations:index }
+
+dbao_admin_realisations_edition:
+    pattern:  /realisations/creation
+    defaults: { _controller: DBAOAdminBundle:Realisations:edition }
+
+dbao_admin_realisations_update:
+    pattern:  /realisations/update/{id}
+    defaults: { _controller: DBAOAdminBundle:Realisations:update }
+
+dbao_admin_realisations_updateFirst:
+    pattern:  /realisations/updateFirst/{id}
+    defaults: { _controller: DBAOAdminBundle:Realisations:updateFirst }
+
+dbao_admin_realisations_update_contenu:
+    pattern:  /realisations/update/contenu/{id}/{retour}
+    defaults: { _controller: DBAOAdminBundle:Realisations:updateContenu }
+
+dbao_admin_realisations_modifier:
+    pattern:  /realisations/modifier/{id}
+    defaults: { _controller: DBAOAdminBundle:Realisations:modifier }
+
+dbao_admin_realisations_modifier_update:
+    pattern:  /realisations/modifier/update/{id}
+    defaults: { _controller: DBAOAdminBundle:Realisations:modifierUpdate }
+
+dbao_admin_realisations_modification:
+    pattern:  /realisations/modification/{id}
+    defaults: { _controller: DBAOAdminBundle:Realisations:modification }
+
+dbao_admin_realisations_supprimer:
+    pattern:  /realisations/supprimer/{id}
+    defaults: { _controller: DBAOAdminBundle:Realisations:supprimer }
+
+dbao_admin_realisations_supprimer_contenu:
+    pattern:  /realisations/supprimer/contenu/{id}/{retour}
+    defaults: { _controller: DBAOAdminBundle:Realisations:supprimerContenu }
+
+dbao_admin_clients:
+    pattern:  /clients
+    defaults: { _controller: DBAOAdminBundle:Clients:index }
+
+dbao_admin_clients_edition:
+    pattern:  /clients/edition
+    defaults: { _controller: DBAOAdminBundle:Clients:edition }
+
+dbao_admin_clients_supprimer:
+    pattern:  /clients/supprimer/{id}
+    defaults: { _controller: DBAOAdminBundle:Clients:supprimer }
+
+dbao_admin_clients_modifier:
+    pattern:  /clients/modifier/{id}
+    defaults: { _controller: DBAOAdminBundle:Clients:modifier }
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+    prefix: /
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /change-password 

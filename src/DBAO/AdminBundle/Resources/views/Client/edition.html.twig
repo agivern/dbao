@@ -1,0 +1,31 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - client{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/slider.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div id="titre_rubrique">CLIENT CREATION</div>
+
+    <form action="" method="post" {{ form_enctype(form) }}>
+	{{ form_errors(form) }}
+
+    {{ form_label(form.emplacement) }} :
+	{{ form_errors(form.emplacement) }}
+	{{ form_widget(form.emplacement) }}
+    </br></br>
+
+    Image :
+	{{ form_errors(form.file) }}
+	{{ form_widget(form.file) }} Taille conseillé : 120 x 120
+    </br></br>
+
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+    </form>
+{% endblock %}

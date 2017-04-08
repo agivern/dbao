@@ -1,0 +1,35 @@
+dbao_site_homepage:
+    pattern:  /index
+    defaults: { _controller: DBAOSiteBundle:Default:index }
+
+dbao_site_agence:
+    pattern:  /agence
+    defaults: { _controller: DBAOSiteBundle:DBAO:index }
+
+dbao_site_expertises:
+    pattern:  /expertises
+    defaults: { _controller: DBAOSiteBundle:Expertises:index }
+
+dbao_site_realisations:
+    pattern:  /realisations/{expertise}
+    defaults: { _controller: DBAOSiteBundle:Realisations:index, expertise: null }
+
+dbao_site_realisations_contenu:
+    pattern:  /realisations/contenu/{id}
+    defaults: { _controller: DBAOSiteBundle:Realisations:contenu }
+
+dbao_site_clients:
+    pattern:  /clients
+    defaults: { _controller: DBAOSiteBundle:Clients:index }
+
+dbao_site_contact:
+    pattern:  /contact
+    defaults: { _controller: DBAOSiteBundle:Contact:index }
+
+dbao_site_news:
+    pattern:  /news
+    defaults: { _controller: DBAOSiteBundle:News:index }
+    
+dbao_site_news_redi:
+    pattern:  /news/redir/{name}
+    defaults: { _controller: DBAOSiteBundle:News:redirect }

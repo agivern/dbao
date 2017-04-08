@@ -1,0 +1,45 @@
+{% extends 'DBAOSiteBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - News{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaosite/css/news.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block titreHeader %}
+NEWS
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div class="phraseNews">
+        QUOI DE NEUF CHEZ DBAO<p class="etoileNews">*</p> ?
+    </div>
+
+    {% set i = 0 %}
+    {% for n in news %}
+        {% set i = i + 1 %}
+        {% if i % 2 == 1 %}
+            <div id="news">
+        {% endif %}
+        {% if i % 2 == 0 %}
+            <div id="news" class="droite">
+        {% endif %}
+            <div class="zoneImage">
+                {% for i in images %}
+                    {% if i.news == n %}
+                        <img class="news" src="/dbao_light_site/web/uploads/documents/{{ i.url }}"></img>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="zoneTexte">
+                <p class="titreNews">{{ n.titre }}</p>
+                <p class="dateNews">{{ n.date | localizeddate('long', 'none', 'fr') }}</p>
+                <p class="accrocheNews">{{ n.description }}</p>
+                <p class="texteNews">{{ n.texte }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

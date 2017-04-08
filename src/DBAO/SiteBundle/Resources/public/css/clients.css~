@@ -1,0 +1,78 @@
+  /*********************************/
+ /***** CSS du client de DBAO *****/
+/*********************************/
+
+  /***********/
+ /* en-tête */
+/***********/
+div.phraseClient
+{
+    font-family: 'open_sanscondensed_light';
+    text-transform : uppercase;
+    font-size: 40px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+  /******************************/
+ /* représentation des clients */
+/******************************/
+div.client
+{
+    height: 120px;
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 47px;
+    margin-right: 7px;
+}
+
+div.particulierTrois {
+    margin-right: 0px;
+}
+    
+div.client img
+{
+    height: 120px;
+    width: 120px;
+}
+
+div.filtre
+{
+    height: 120px;
+    width: 120px;
+    margin-top: -123px;
+    background-color: white;
+    opacity: 0.4;
+    transition: opacity 0.25s;
+}
+
+div.filtre:hover
+{
+    opacity:0;
+}
+
+  /**************/
+ /* responsive */
+/**************/
+@media (min-width: 1190px) {
+    div.phraseClient
+    {
+        padding-left: 520px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    div.particulierDeux {
+        margin-right: -3px;
+    }
+}
+
+@media (max-width: 589px) {
+    div.particulierDeux {
+        margin-right: -3px;
+    }
+
+    div.particulierUn {
+        margin-right: -3px;
+    }
+}

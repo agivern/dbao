@@ -1,0 +1,41 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - news{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/slider.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div id="titre_rubrique">NEWS CREATION</div>
+
+    <form action="" method="post" {{ form_enctype(form) }}>
+	{{ form_errors(form) }}
+
+    {{ form_label(form.titre) }} :
+	{{ form_errors(form.titre) }}
+	{{ form_widget(form.titre) }}
+    </br></br>
+
+    {{ form_label(form.date) }} :
+	{{ form_errors(form.date) }}
+	{{ form_widget(form.date) }}
+    </br></br>
+
+    {{ form_label(form.description) }} :
+	{{ form_errors(form.description) }}
+	{{ form_widget(form.description, { 'attr': {'rows': '3', 'cols': '28'} }) }}
+    </br></br>
+
+    {{ form_label(form.texte) }} :
+	{{ form_errors(form.texte) }}
+	{{ form_widget(form.texte) }}
+    </br></br>
+
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+    </form>
+{% endblock %}

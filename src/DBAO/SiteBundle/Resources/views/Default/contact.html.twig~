@@ -1,0 +1,113 @@
+{% extends 'DBAOSiteBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - Contact{% endblock %}
+
+{% block titreHeader %}
+CONTACT
+{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaosite/css/contact.css') }}" type="text/css" media="all" />
+
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?AIzaSyDr2CQYrUSaKuEnMa30FNefiaPByzs2gIo&sensor=false">
+    </script>
+
+    <script type="text/javascript">
+        function initialize() {
+
+            var styles = {
+            'monTheme':
+                [{
+                    featureType: 'all',
+                    stylers: [
+                        {saturation: -150},
+                        {gamma: 1.5}
+                    ]
+                },
+                {
+                    featureType: "all",
+                    elementType: "labels",
+                        stylers: [
+                            {hue: "#333333"}
+                        ]
+                },
+                {
+                    featureType: "water",
+                    stylers: [
+                        {color: "#7aa3d9"},
+                        {saturation: 0},
+                        {gamma: 0}
+                    ]
+                },
+            ]};
+
+            if(window.innerWidth >= 1190)
+            {
+                var mapOptions = {
+                    center: new google.maps.LatLng(47.6495, -2.7775),
+                    zoom: 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    disableDefaultUI: true,
+                    mapTypeId: 'monTheme'
+                };
+            }
+            else
+            {
+                var mapOptions = {
+                    center: new google.maps.LatLng(47.653, -2.7840),
+                    zoom: 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    disableDefaultUI: true,
+                    mapTypeId: 'monTheme'
+                };
+            }
+
+            var map = new google.maps.Map(document.getElementById("map"),
+                mapOptions);
+            var styledMapType = new google.maps.StyledMapType(styles['monTheme'], {name: 'monTheme'});
+            map.mapTypes.set('monTheme', styledMapType);
+
+            var myLatlng = new google.maps.LatLng(47.6500682, -2.784085299999989);
+            var image = "{{ asset('bundles/dbaosite/images/GOOGLE-green.png') }}";
+
+            var myMarker = new google.maps.Marker({
+	            position: myLatlng,
+	            map: map,
+	            title: "DBAO*",
+	            icon: image
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+        <p class="phraseNews">passez nous le bonjour !</p>
+    </div> <!-- On ferme le contenu pour afficher la map corectement -->
+    <div class="blockMap"> <!-- Le template fermera cette div -->
+        <div class="blockMapImage"></div>
+        <p class="adresse">
+            24, Boulevard de la résistance</br>
+            56 000 - Vannes - FRANCE
+        </p>
+        <p class="contact">
+            Tél. : +33 2 97 67 54 93</br>
+            contact@db-ao.com
+        </p>
+        <a href="mailto:contact@db-ao.com" class="mail"></a>
+{% endblock %}
+
+{# Corps de la page #}
+{% block map %}
+    <div id="map"></div>
+    <script type="text/javascript">
+        if(window.innerHeight >= 1080)
+	        document.getElementById('map').style.height = 600 + "px";
+	    else
+            document.getElementById('map').style.height = 450 + "px";
+	</script>
+{% endblock %}
+

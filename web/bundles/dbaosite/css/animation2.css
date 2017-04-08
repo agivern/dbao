@@ -1,0 +1,106 @@
+/* ANIMATION */
+
+    @-moz-keyframes cycle {
+	    0%  { right:0px; z-index:12; }
+	    40%  { right:0px; z-index:12; }
+	    50%  { right: 1030px; z-index:12; }
+	    51%  { right: 1030px; z-index:8; }
+	    89%  { right: 0px; z-index:8; }
+	    100%{ right:0px; z-index:8; }
+    }
+
+    @-moz-keyframes cycletwo {
+        0%  { right:0px; z-index:10; }
+	    40%  { right:0px; z-index:10; }
+	    50%  { right: 0px; z-index:10; }
+	    90%  { right: 0px; z-index:10; }
+	    100%{ right:1030px; z-index:10; }
+    }
+
+    @-webkit-keyframes cycle {
+	    0%  { right:0px; z-index:12; }
+	    40%  { right:0px; z-index:12; }
+	    50%  { right: 1030px; z-index:12; }
+	    51%  { right: 1030px; z-index:8; }
+	    89%  { right: 0px; z-index:8; }
+	    100%{ right:0px; z-index:8; }
+	
+    }
+
+    @-webkit-keyframes cycletwo {
+	    0%  { right:0px; z-index:10; }
+	    40%  { right:0px; z-index:10; }
+	    50%  { right: 0px; z-index:10; }
+	    90%  { right: 0px; z-index:10; }
+	    100%{ right:1030px; z-index:10; }
+    }
+
+    @-moz-keyframes cycles {
+	    0%  { right:0px; z-index:12; }
+	    40%  { right:0px; z-index:12; }
+	    50%  { right: 510px; z-index:12; }
+	    51%  { right: 510px; z-index:8; }
+	    89%  { right: 0px; z-index:8; }
+	    100%{ right:0px; z-index:8; }
+	
+    }
+
+    @-moz-keyframes cycletwos {
+	    0%  { right:0px; z-index:10; }
+	    40%  { right:0px; z-index:10; }
+	    50%  { right: 0px; z-index:10; }
+	    90%  { right: 0px; z-index:10; }
+	    100%{ right:510px; z-index:10; }
+    }
+
+    @-webkit-keyframes cycles {
+	    0%  { right:0px; z-index:12; }
+	    40%  { right:0px; z-index:12; }
+	    50%  { right: 510px; z-index:12; }
+	    51%  { right: 510px; z-index:8; }
+	    89%  { right: 0px; z-index:8; }
+	    100%{ right:0px; z-index:8; }
+    }
+
+    @-webkit-keyframes cycletwos {
+	    0%  { right:0px; z-index:10; }
+	    40%  { right:0px; z-index:10; }
+	    50%  { right: 0px; z-index:10; }
+	    90%  { right: 0px; z-index:10; }
+	    100%{ right:510px; z-index:10; }
+    }
+
+    @-moz-keyframes cycless {
+	    0%  { right: 0px; z-index:12; }
+	    40%  { right: 0px; z-index:12; }
+	    50%  { right: 250px; z-index:12; }
+	    51%  { right: 250px; z-index:8; }
+	    89%  { right: 0px; z-index:8; }
+	    100%{ right: 0px; z-index:8; }
+	
+    }
+
+    @-moz-keyframes cycletwoss {
+	    0%  { right: 0px; z-index:10; }
+	    40%  { right: 0px; z-index:10; }
+	    50%  { right: 0px; z-index:10; }
+	    90%  { right: 0px; z-index:10; }
+	    100%{ right: 250px; z-index:10; }
+    }
+
+    @-webkit-keyframes cycless {
+	    0%  { right: 0px; z-index:12; }
+	    40%  { right: 0px; z-index:12; }
+	    50%  { right: 250px; z-index:12; }
+	    51%  { right: 250px; z-index:8; }
+	    89%  { right: 0px; z-index:8; }
+	    100%{ right: 0px; z-index:8; }
+    }
+
+    @-webkit-keyframes cycletwoss {
+	    0%  { right: 0px; z-index:10; }
+	    40%  { right: 0px; z-index:10; }
+	    50%  { right: 0px; z-index:10; }
+	    90%  { right: 0px; z-index:10; }
+	    100%{ right: 250px; z-index:10; }
+    }

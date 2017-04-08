@@ -1,0 +1,98 @@
+{# src/DBAO/SiteBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- on fixe le zoom des smartphones et tablettes -->
+        <meta name="viewport" content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+
+        <title>{% block title %}DBAO{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('bundles/dbaosite/css/style.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbaosite/css/helvetib/stylesheet.css') }}" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="{{ asset('bundles/dbaosite/css/open/stylesheet.css') }}" type="text/css" charset="utf-8" />
+        {% block import %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <div id="page" class="general">
+            <header>
+                <div class="titre">
+                    <a href="{{ path('dbao_site_homepage') }}">
+                        <div class="logo"></div><div class="star"></div><br/><div class="creative"></div>
+                    </a>
+                    <div class="titreHeader">{% block titreHeader %}{% endblock %}</div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li id="lien_menu" class="ouvrant agence">DBAO*
+                            <ul class="subMenu">
+                                <li><a href="{{ path('dbao_site_agence') }}">Agence</a></li>
+                                <li><a href="{{ path('dbao_site_expertises') }}">Expertises</a></li>
+                            </ul>
+                        </li>
+                        <li id="lien_menu" class="ouvrant">Production
+                            <ul class="subMenu">
+                                <li><a href="{{ path('dbao_site_realisations') }}">Book</a></li>
+                                <li><a href="{{ path('dbao_site_clients') }}">Clients</a></li>
+                            </ul>
+                        </li>
+                        <div id="menuOrdi">
+                            <a id="lien_menu" href="{{ path('dbao_site_news') }}">News</a>
+                            <a id="lien_menu" style="margin-right: 0px;" href="{{ path('dbao_site_contact') }}">Contact</a>
+                        </div>
+                    </ul>                        
+                </nav>
+                    <div id="menuMobile">
+                        <a id="lien_menu" href="{{ path('dbao_site_news') }}">News</a>
+                        <a id="lien_menu" style="margin-right: 0px;" href="{{ path('dbao_site_contact') }}">Contact</a>
+                    </div>
+            </header>
+
+            <div id="contenu">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+        {% block map %}
+        {% endblock %}
+        <footer id="page">
+            <div id="pied_de_page">
+                <div id="img_footer"></div>
+                <div id="footer_contact">
+                    <a id="footer_picto" href="{{ path('dbao_site_contact') }}"></a>
+                    24, Boulevard de résistance</br>
+                    56 000 - Vannes - FRANCE</br>
+                    <div id="footer_contact" class="bold">
+                        +33 2 97 67 54 93</br>
+                        contact@db-ao.com
+                    </div>
+                </div>
+                <div id="footer_lien">
+                    <a href="http://www.db-ao.com">www.db-ao.com</a></br>
+                    DBAO* c 2013 - Mentions légales
+                </div>
+                <nav id="navigation_menu">
+                    <ul>
+                        <li><span id="footer_menu">DBAO*</span>
+                            <ul class="subMenu">
+                                <li><a href="{{ path('dbao_site_agence') }}">Agence</a></li>
+                                <li><a href="{{ path('dbao_site_expertises') }}">Expertises</a></li>
+                            </ul>
+                        </li>
+                        <li><span id="footer_menu">Production</span>
+                            <ul class="subMenu">
+                                <li><a href="{{ path('dbao_site_realisations') }}">Réalisations</a></li>
+                                <li><a href="{{ path('dbao_site_clients') }}">Clients</a></li>
+                            </ul>
+                        </li>
+                        <a id="footer_menu" href="{{ path('dbao_site_news') }}">News</a>
+                        <a id="footer_menu" href="{{ path('dbao_site_contact') }}"  style="margin-right: 0px;">Contact</a>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>

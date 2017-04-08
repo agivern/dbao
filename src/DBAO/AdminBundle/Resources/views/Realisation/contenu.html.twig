@@ -1,0 +1,42 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - realisation{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/realisations.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div id="titre_rubrique">REALISATION CONTENU</div>
+
+    {% for c in contenu %}
+        <div id="contenuRealisation">
+            <img src="/dbao_light_site/web/uploads/documents/{{ c.url }}"></img>
+            <form action="{{ path('dbao_admin_realisations_update_contenu', {'id': c.id, 'retour':retour} ) }}" method="post">
+                Emplacement : <input type="text" name="form_up" value="{{ c.emplacement }}"/>
+                <input type="submit">
+            </form>
+            <a id="lien_acces" href="{{ path('dbao_admin_realisations_supprimer_contenu', { 'id': c.id, 'retour':retour} ) }}">Supprimer <p>></p></a>
+        </div>
+    {% endfor %}
+
+    <form action="" method="post" {{ form_enctype(form) }}>
+	{{ form_errors(form) }}
+
+	{{ form_label(form.emplacement) }} :
+	{{ form_errors(form.emplacement) }}
+	{{ form_widget(form.emplacement) }}
+    </br></br>
+
+    {{ form_label(form.file) }} :
+	{{ form_errors(form.file) }}
+	{{ form_widget(form.file) }}
+    </br></br>
+
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+    </form>
+{% endblock %}

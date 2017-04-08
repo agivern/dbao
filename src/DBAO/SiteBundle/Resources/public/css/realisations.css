@@ -1,0 +1,183 @@
+/*****************************************************/
+/***** CSS des réalisations du site de DBAO *****/
+/*****************************************************/
+
+
+/*****************************************************/
+/***** Réalisation tri *****/
+/*****************************************************/
+
+#tri_div
+{
+    margin-bottom: 50px;
+}
+
+#tri
+{
+    height: 75px;
+    margin-right: 10px;
+    width: 120px;
+    font-weight: bold;
+    float: left;
+    text-decoration: none;
+    color: black;
+}
+
+#tri:hover
+{
+    color: #96ce0f;
+}
+
+#background_tri
+{
+    width: 120px;
+    height: 55px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #000;
+}
+
+#tri:hover #background_tri
+{
+    border-bottom: 1px solid #96ce0f;
+}
+
+#background_tri.Strategie
+{
+    background-image:url(../images/Picto_strategie.png);
+}
+
+#background_tri.Design
+{
+    background-image:url(../images/Picto_design.png);
+}
+
+#background_tri.Developpement
+{
+    background-image:url(../images/Picto_developpement.png);
+}
+
+#background_tri.Motion
+{
+    background-image:url(../images/Picto_3Dmotion.png);
+}
+
+@media (min-width: 1190px) {
+    #tri_div
+    {
+        height: 75px;
+        width: 510px;
+        margin-left: 520px;
+    }
+}
+@media (min-width: 590px) and (max-width: 1189px) {
+    #tri_div
+    {
+        height: 75px;
+        width: 510px;
+    }
+}
+
+@media (max-width: 589px) {
+    #tri_div
+    {
+        height: 170px;
+        width: 250px;
+    }
+
+    #tri.droite
+    {
+        margin-right: 0px;
+    }
+    
+    #tri.enhaut
+    {
+        height: 95px;
+    }
+}
+
+/*****************************************************/
+/***** Réalisation contenu *****/
+/*****************************************************/
+#realisation
+{
+    height: 200px;
+    width: 250px;
+    margin-right: 10px;
+    float: left;
+}
+
+#realisation_description {
+    height: 25px;
+    color: #7c7c7c;
+    border-bottom: 1px solid #c1c1c1;
+    padding-left: 10px;
+    vertical-align: middle;
+    line-height: 25px;
+    width: 240px;
+}
+
+#filtre
+{
+    height: 150px;
+    width: 250px;
+    margin-top: -150px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+#filtre:hover
+{
+    opacity: 0.4;
+}
+
+@media (min-width: 1190px) {
+
+    #realisation_rubrique
+    {
+        height: 200px;
+        width: 1030px;
+        margin-bottom: 50px;
+    }
+
+    #realisation {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+
+    #realisation_rubrique
+    {
+        height: 440px;
+        width: 510px;
+        margin-bottom: 40px;
+    }
+
+    #realisation {
+        margin-bottom: 40px;
+    }
+
+    #realisation.particulier
+    {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 589px) {
+
+    #realisation_rubrique
+    {
+        height: 440px;
+        width: 290px;
+        margin-bottom: 40px;
+    }
+
+    #realisation
+    {
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+}

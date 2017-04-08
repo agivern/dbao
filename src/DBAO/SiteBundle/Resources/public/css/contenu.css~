@@ -1,0 +1,155 @@
+  /*************************************************************/
+ /***** CSS du contenu d'une réalisations du site de DBAO *****/
+/*************************************************************/
+
+
+  /*********************/
+ /* en-tête du client */
+/*********************/
+div.gauche
+{
+    float: left;
+}
+
+div.droite
+{
+    margin-bottom: 80px;
+    float: left;
+}
+
+  /*****************/
+ /* nom du client */
+/*****************/
+p.nomClient
+{
+    padding-bottom: 20px;
+    height: 12px;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    font-family: 'open_sans_condensedbold';
+    text-transform : uppercase;
+    margin-bottom: 25px;
+}
+
+  /***************************/
+ /* picto de la realisation */
+/***************************/
+#picto
+{
+    float: left;
+    height: 18px;
+    padding: 5px 0px 0px 30px;
+    background-repeat: no-repeat;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+#picto p
+{
+    text-transform : uppercase;
+    font-size: 10px;
+    margin-top: 0px;
+    color: #7c7c7c;
+}
+
+#picto.strategie
+{
+    background-image:url(../images/Picto_strategie-lite.png);
+}
+
+#picto.design
+{
+    background-image:url(../images/Picto_design-lite.png);
+}
+
+#picto.developpement
+{
+    background-image:url(../images/Picto_developpement-lite.png);
+}
+
+#picto.motion
+{
+    background-image:url(../images/Picto_3Dmotion-lite.png);
+}
+
+  /*********************************/
+ /* description de la realisation */
+/*********************************/
+p.descriptionTitre
+{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+p.descriptionTexte
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #7c7c7c;
+}
+
+  /****************************/
+ /* images de la realisation */
+/****************************/
+img.contenuImage
+{
+    margin-bottom: 27px;
+}
+
+  /*************************/
+ /* responsive du contenu */
+/*************************/
+@media (min-width: 1190px) {
+    img.contenuImage
+    {
+        width: 1030px;
+    }
+
+    div.gauche
+    {
+        margin-right: 10px;
+        width: 510px;
+        margin-bottom: 30px;
+    }
+
+    div.droite
+    {
+        width: 510px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    img.contenuImage
+    {
+        width: 510px;
+    }
+
+    div.gauche
+    {
+        width: 510px;
+    }
+
+    div.droite
+    {
+        width: 510px;
+    }
+}
+
+@media (max-width: 589px) {
+    img.contenuImage
+    {
+        width: 250px;
+    }
+    
+    div.gauche
+    {
+        width: 250px;
+    }
+
+    div.droite
+    {
+        width: 250px;
+    }
+}

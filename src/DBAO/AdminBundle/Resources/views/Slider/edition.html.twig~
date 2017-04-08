@@ -1,0 +1,41 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - slider{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/slider.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div id="titre_rubrique">SLIDER CREATION</div>
+
+    <form action="" method="post" {{ form_enctype(form) }}>
+	{{ form_errors(form) }}
+
+	{{ form_label(form.titre) }}
+	{{ form_errors(form.titre) }}
+	{{ form_widget(form.titre) }}
+    </br></br>
+
+    {{ form_label(form.emplacement) }}
+	{{ form_errors(form.emplacement) }}
+	{{ form_widget(form.emplacement) }}
+    </br></br>
+
+    Grande vignette :
+	{{ form_errors(form.bigFile) }}
+	{{ form_widget(form.bigFile) }}
+    </br></br>
+
+    Petite vignette :
+	{{ form_errors(form.littleFile) }}
+	{{ form_widget(form.littleFile) }}
+    </br></br>
+
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+    </form>
+{% endblock %}

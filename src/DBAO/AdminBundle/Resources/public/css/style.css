@@ -1,0 +1,176 @@
+/*****************************************************/
+/***** CSS du site de DBAO *****/
+/*****************************************************/
+
+/******************************************************/
+/* En-tête des pages */
+/******************************************************/
+
+*
+{
+    font-family: Arial;
+    font-size: 12px;
+}
+
+body
+{
+    background-color: #eae9e7;
+}
+
+header
+{
+    display: block;
+    padding-top: 10px;
+    width: 1030px;
+    height: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -8px;
+}
+
+h1
+{
+    font-family: inherit;
+}
+
+#titre
+{
+    height: 60px;
+    float: left;
+    width: 520px;
+    margin-top: 10px;
+}
+
+#titre h1
+{
+    font-size: 30px;
+    float: left;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+#titre p
+{
+    display:inline;
+    color: #90ee02;
+    font-size: 30px;
+}
+
+nav
+{
+    height: 60px;
+    margin-left: 0px;
+    display: block;
+    float: right;
+    margin-top: 10px;
+    width: 510px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+
+#lien_menu
+{
+    display: inline-block;
+    border-bottom: 1px solid black;
+    height: 18px;
+    margin-top: 50px;
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+    float: left;
+    width: 120px;
+}
+
+#lien_menu.deco
+{
+    float: right;
+    vertical-align: top;
+    margin-top: -10px;
+    margin-right: 0px;
+}
+
+#lien_menu.ouvrant:hover
+{
+    margin-top: 0px;
+    height: 60px;
+    cursor: default;
+}
+
+#lien_menu:hover
+{
+    border-bottom: 1px solid #7bc800;
+    color: #7bc800;
+    cursor: pointer;
+}
+
+#page {
+    background-color: white;
+    width: 1190px;
+    margin: auto;
+}
+
+/******************************************************/
+/* Contenu de la page */
+/******************************************************/
+
+#contenu {
+    margin-top: 90px;
+    width: 1030px;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-bottom: 200px;
+}
+
+
+/******************************************************/
+/* Pied des pages */
+/******************************************************/
+
+footer {
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+footer p {
+    float: right;
+    display: inline;
+    margin-bottom: 400px;
+    margin-bottom: 60px;
+}
+
+/******************************************************/
+/* Personnalisation des formulaires */
+/******************************************************/
+
+#formulaire
+{
+    margin-top: 40px;
+}
+
+#formulaire div
+{
+    margin-bottom: 10px;
+}
+
+#formulaire p
+{
+    width:200px;
+    display: block;
+    float: left;
+}
+
+#form_position
+{
+    display: block;
+}
+
+.clear {
+  clear: both;
+}

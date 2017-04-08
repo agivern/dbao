@@ -1,0 +1,68 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - Accueil{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/accueil.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+
+    <div id="titre_rubrique">
+        Listes des parties modifiables
+    </div>
+
+    <div id="rubrique">
+        <div id="cadre" href="#">
+            <div id="rubrique_image">
+            </div>
+            <div id="rubrique_titre">
+                Slider
+            </div>
+            <div id="rubrique_description">
+                Modification du slide
+            </div>
+            <a id="lien_acces" href="{{ path('dbao_admin_slider') }}">Accéder <p>></p></a>
+        </div>
+
+        <div id="cadre">
+            <div id="rubrique_image">
+            </div>
+            <div id="rubrique_titre">
+                Réalisation
+            </div>
+            <div id="rubrique_description">
+                 Ajout/Modification de réalisations
+            </div>
+            <a id="lien_acces" href="{{ path('dbao_admin_realisations') }}">Accéder <p>></p></a>
+        </div>
+
+        <div id="cadre">
+            <div id="rubrique_image">
+            </div>
+            <div id="rubrique_titre">
+                Clients
+            </div>
+            <div id="rubrique_description">
+                Ajout/Modification de clients
+            </div>
+            <a id="lien_acces" href="{{ path('dbao_admin_clients') }}">Accéder <p>></p></a>
+        </div>
+
+        <div id="cadre" class="particulier">
+            <div id="rubrique_image">
+            </div>
+            <div id="rubrique_titre">
+                News
+            </div>
+            <div id="rubrique_description">
+                Ajout/Modification de news
+            </div>
+            <a id="lien_acces" href="{{ path('dbao_admin_news') }}">Accéder <p>></p></a>
+        </div>
+    </div>
+
+{% endblock %}
+

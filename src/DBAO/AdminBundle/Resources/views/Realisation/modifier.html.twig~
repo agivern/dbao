@@ -1,0 +1,24 @@
+{% extends 'DBAOAdminBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - realisation{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaoadmin/css/realisations.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{# Corps de la page #}
+{% block body %}
+    <div id="titre_rubrique">REALISATION</div>
+        <form action="{{ path('dbao_admin_realisations_modifier_update', {'id': realisation.id}) }}" method="post">
+            Titre : <input type="text" name="form_titre" value="{{ realisation.titre }}"/><br/>
+            Accroche : <textarea name="form_accroche" style="margin-right:30px;" />{{ realisation.accroche }}</textarea><br/>
+            Description : <textarea name="form_description" style="margin-right:30px;" />{{ realisation.motion }}</textarea><br/>
+            Stratégie <input type="checkbox" name="form_strategie" {% if realisation.strategie %} checked {% endif %} style="margin-right:30px;" />
+            Developpement <input type="checkbox" name="form_developpement" {% if realisation.developpement %} checked {% endif %} style="margin-right:30px;" />
+            Design <input type="checkbox" name="form_design" {% if realisation.design %} checked {% endif %} style="margin-right:30px;" />
+            3D / Motion <input type="checkbox" name="form_motion" {% if realisation.motion %} checked {% endif %}/><br/>
+            <input type="submit">
+        </form>
+{% endblock %}
+

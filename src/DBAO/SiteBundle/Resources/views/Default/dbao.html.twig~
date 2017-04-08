@@ -1,0 +1,95 @@
+{% extends 'DBAOSiteBundle::layout.html.twig' %}
+
+{# Déclaration du titre de la page, imprort des JS/CSS #}
+{% block title %}{{ parent() }} - Agence{% endblock %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ asset('bundles/dbaosite/css/agence.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block titreHeader %}
+AGENCE
+{% endblock %}
+
+{% block body %}
+    <p class="phraseAgence">de bouche à oreille...</p>
+
+    <div id="slider">
+        <div id="mask">
+            <ul>
+            {% set i = 0 %}
+            {% for s in slider %}
+                {% if i < 2 %}
+                    {% set i = i + 1 %}
+                    {% if i == 1 %}
+                        <li id="first" class="firstanimation">
+                    {% elseif i == 2 %}
+                        <li id="second" class="secondanimation">
+                    {% endif %}
+                            <img src="/dbao_light_site/web/uploads/documents/{{ s.bigUrl }}" alt="{{ s.titre }}"/>
+                            <div class="slideTitre">{{ s.titre }}</div>
+                        </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="progress-bar"></div>
+    </div>
+
+    <div id="minSlider">
+        <div id="mask">
+            <ul>
+            {% set i = 0 %}
+            {% for s in slider %}
+                {% if i < 2 %}
+                    {% set i = i + 1 %}
+                    {% if i == 1 %}
+                        <li id="first" class="firstanimation">
+                    {% elseif i == 2 %}
+                        <li id="second" class="secondanimation">
+                    {% endif %}
+                            <img src="/dbao_light_site/web/uploads/documents/{{ s.littleUrl }}" alt="{{ s.titre }}"/>
+                            <div class="slideTitre">{{ s.titre }}</div>
+                        </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="progress-bar"></div>
+    </div>
+
+    <div id="texteAgence">
+        <p>Dein Syria per speciosam interpatet diffusa planitiem. hanc nobilitat Antiochia, mundo cognita civitas, cui non certaverit alia  advecticiis ita adfluere copiis et internis, et Laodicia et Apamia itidemque Seleucia iam inde a primis auspiciis florentissimae.</p>
+        </br>
+        <p>Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae. Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.</p>
+        </br>
+        <p>Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.</p>
+        
+        <div id="metier">
+            <p class="titreMetier"> Notre métier :</p>
+            Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet, non quo modo efficiatur concludaturque ratio tradit, non qua via captiosa solvantur ambigua.
+            
+            <p class="titreExpertise">Expertises</p>
+                <div id="picto" class="strategie"></div>
+                <div id="picto" class="design"></div>
+                <div id="picto" class="developpement"></div>
+                <div id="picto" class="motion"></div>
+            <div id="line"></div>
+            <a id="lien_acces" href="{{ path('dbao_site_expertises') }}" class="lienHeader">Découvrir la page <p>></p></a>
+        </div>
+    </div>
+
+    <div id="personnel">
+        {% for p in personnel %}
+            <div class="perso">
+                <div class="name">
+                    <p class="nomPerso">{{ p.nom }}</p>
+                    <p class="statutPerso">{{ p.statut }}</p>
+                    <p class="fonctionPerso">{{ p.fonction }}</p>
+                </div>
+                <img class="imagePerso" src="/dbao_light_site/web/uploads/documents/{{ p.url }}"></img>
+                <div class="phrasePerso"><p>{{ p.phrase }}</p></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

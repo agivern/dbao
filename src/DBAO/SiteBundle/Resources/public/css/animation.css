@@ -1,0 +1,389 @@
+/* ANIMATION */
+
+    @-moz-keyframes cycle {
+	    0%  { right:0px; z-index:12; }
+	    4%  { right:0px; z-index:12; } 
+	    16% { right:0px; z-index:12; } 
+	    20% { right:1030px; z-index:12; }   
+	    21% { right:1030px; z-index:12; }
+	    70% { right:1030px; z-index:12; }
+	    71% { right:1030px; z-index:2; }
+	    72% { right:0px; z-index:2; }
+	    97% { right:0px; z-index:2; }
+	    100%{ right:0px; z-index:2; }
+    }
+
+    @-moz-keyframes cycletwo {
+	    0%  { right:0px; z-index:-1; }
+	    16% { right:0px; z-index:-1; }
+	    17% { right:0px; z-index:10; }
+	    20% { right:0px; z-index:10; }
+	    24% { right:0px; z-index:10; }
+	    36% { right:0px; z-index:10; }
+	    40% { right:1030px; z-index:10; }
+	    41% { right:1030px; z-index:10; }
+	    100%{ right:1030px; z-index:10; }
+    }
+
+    @-moz-keyframes cyclethree {
+	    0%  { right:0px; z-index:-1; }
+	    36% { right:0px; z-index:-1; }
+	    37% { right:0px; z-index:8; }
+	    40% { right:0px; z-index:8; }
+	    44% { right:0px; z-index:8; }
+	    56% { right:0px; z-index:8; }
+	    60% { right:1030px; z-index:8; }
+	    61% { right:1030px; z-index:8; }
+	    100%{ right:1030px; z-index:8; }
+    }
+
+    @-moz-keyframes cyclefour {
+	    0%  { right:0px; z-index:-1; }
+	    56% { right:0px; z-index:-1; }
+	    57% { right:0px; z-index:6; }
+	    60% { right:0px; z-index:6; }
+	    64% { right:0px; z-index:6; }
+	    76% { right:0px; z-index:6; }
+	    80% { right:1030px; z-index:6; }
+	    81% { right:1030px; z-index:6; }
+	    100%{ right:1030px; z-index:6; }
+    }
+
+    @-moz-keyframes cyclefive {
+	    0%  { right:1030px; z-index:4; }
+	    76% { right:0px; z-index:-1; }
+	    77% { right:0px; z-index:4; }
+	    80% { right:0px; z-index:4; }
+	    84% { right:0px; z-index:4; }
+	    96% { right:0px; z-index:4; }
+	    100%{ right:1030px; z-index:4; }
+    }
+
+    @-webkit-keyframes cycle {
+	    0%  { right:0px; z-index:12; }
+	    4%  { right:0px; z-index:12; } 
+	    16% { right:0px; z-index:12; } 
+	    20% { right:1030px; z-index:12; }   
+	    21% { right:1030px; z-index:12; }
+	    70% { right:1030px; z-index:12; }
+	    71% { right:1030px; z-index:2; }
+	    72% { right:0px; z-index:2; }
+	    97% { right:0px; z-index:2; }
+	    100%{ right:0px; z-index:2; }
+	
+    }
+
+    @-webkit-keyframes cycletwo {
+	    0%  { right:0px; z-index:-1; }
+	    16% { right:0px; z-index:-1; }
+	    17% { right:0px; z-index:10; }
+	    20% { right:0px; z-index:10; }
+	    24% { right:0px; z-index:10; }
+	    36% { right:0px; z-index:10; }
+	    40% { right:1030px; z-index:10; }
+	    41% { right:1030px; z-index:10; }
+	    100%{ right:1030px; z-index:10; }
+    }
+
+    @-webkit-keyframes cyclethree {
+	    0%  { right:0px; z-index:-1; }
+	    36% { right:0px; z-index:-1; }
+	    37% { right:0px; z-index:8; }
+	    40% { right:0px; z-index:8; }
+	    44% { right:0px; z-index:8; }
+	    56% { right:0px; z-index:8; }
+	    60% { right:1030px; z-index:8; }
+	    61% { right:1030px; z-index:8; }
+	    100%{ right:1030px; z-index:8; }
+    }
+
+    @-webkit-keyframes cyclefour {
+	    0%  { right:0px; z-index:-1; }
+	    56% { right:0px; z-index:-1; }
+	    57% { right:0px; z-index:6; }
+	    60% { right:0px; z-index:6; }
+	    64% { right:0px; z-index:6; }
+	    76% { right:0px; z-index:6; }
+	    80% { right:1030px; z-index:6; }
+	    81% { right:1030px; z-index:6; }
+	    100%{ right:1030px; z-index:6; }
+    }
+
+    @-webkit-keyframes cyclefive {
+	    0%  { right:1030px; z-index:4; }
+	    76% { right:0px; z-index:-1; }
+	    77% { right:0px; z-index:4; }
+	    80% { right:0px; z-index:4; }
+	    84% { right:0px; z-index:4; }
+	    96% { right:0px; z-index:4; }
+	    100%{ right:1030px; z-index:4; }
+    }
+
+    @-moz-keyframes cycles {
+	    0%  { right:0px; z-index:12; }
+	    4%  { right:0px; z-index:12; } 
+	    16% { right:0px; z-index:12; } 
+	    20% { right:510px; z-index:12; }   
+	    21% { right:510px; z-index:12; }
+	    70% { right:510px; z-index:12; }
+	    71% { right:510px; z-index:2; }
+	    72% { right:0px; z-index:2; }
+	    97% { right:0px; z-index:2; }
+	    100%{ right:0px; z-index:2; }
+	
+    }
+
+    @-moz-keyframes cycletwos {
+	    0%  { right:0px; z-index:-1; }
+	    16% { right:0px; z-index:-1; }
+	    17% { right:0px; z-index:10; }
+	    20% { right:0px; z-index:10; }
+	    24% { right:0px; z-index:10; }
+	    36% { right:0px; z-index:10; }
+	    40% { right:510px; z-index:10; }
+	    41% { right:510px; z-index:10; }
+	    100%{ right:510px; z-index:10; }
+    }
+
+    @-moz-keyframes cyclethrees {
+	    0%  { right:0px; z-index:-1; }
+	    36% { right:0px; z-index:-1; }
+	    37% { right:0px; z-index:8; }
+	    40% { right:0px; z-index:8; }
+	    44% { right:0px; z-index:8; }
+	    56% { right:0px; z-index:8; }
+	    60% { right:510px; z-index:8; }
+	    61% { right:510px; z-index:8; }
+	    100%{ right:510px; z-index:8; }
+    }
+
+    @-moz-keyframes cyclefours {
+	    0%  { right:0px; z-index:-1; }
+	    56% { right:0px; z-index:-1; }
+	    57% { right:0px; z-index:8; }
+	    60% { right:0px; z-index:6; }
+	    64% { right:0px; z-index:6; }
+	    76% { right:0px; z-index:6; }
+	    80% { right:510px; z-index:6; }
+	    81% { right:510px; z-index:6; }
+	    100%{ right:510px; z-index:6; }
+    }
+
+    @-moz-keyframes cyclefives {
+	    0%  { right:510px; z-index:4; }
+	    76% { right:0px; z-index:-1; }
+	    77% { right:0px; z-index:4; }
+	    80% { right:0px; z-index:4; }
+	    84% { right:0px; z-index:4; }
+	    96% { right:0px; z-index:4; }
+	    100%{ right:510px; z-index:4; }
+    }
+
+    @-webkit-keyframes cycles {
+	    0%  { right:0px; z-index:12; }
+	    4%  { right:0px; z-index:12; } 
+	    16% { right:0px; z-index:12; } 
+	    20% { right:510px; z-index:12; }   
+	    21% { right:510px; z-index:12; }
+	    70% { right:510px; z-index:12; }
+	    71% { right:510px; z-index:2; }
+	    72% { right:0px; z-index:2; }
+	    97% { right:0px; z-index:2; }
+	    100%{ right:0px; z-index:2; }
+    }
+
+    @-webkit-keyframes cycletwos {
+	    0%  { right:0px; z-index:-1; }
+	    16% { right:0px; z-index:-1; }
+	    17% { right:0px; z-index:10; }
+	    20% { right:0px; z-index:10; }
+	    24% { right:0px; z-index:10; }
+	    36% { right:0px; z-index:10; }
+	    40% { right:510px; z-index:10; }
+	    41% { right:510px; z-index:10; }
+	    100%{ right:510px; z-index:10; }
+    }
+
+    @-webkit-keyframes cyclethrees {
+	    0%  { right:0px; z-index:-1; }
+	    36% { right:0px; z-index:-1; }
+	    37% { right:0px; z-index:8; }
+	    40% { right:0px; z-index:8; }
+	    44% { right:0px; z-index:8; }
+	    56% { right:0px; z-index:8; }
+	    60% { right:510px; z-index:8; }
+	    61% { right:510px; z-index:8; }
+	    100%{ right:510px; z-index:8; }
+    }
+
+    @-webkit-keyframes cyclefours {
+	    0%  { right:0px; z-index:-1; }
+	    56% { right:0px; z-index:-1; }
+	    57% { right:0px; z-index:8; }
+	    60% { right:0px; z-index:6; }
+	    64% { right:0px; z-index:6; }
+	    76% { right:0px; z-index:6; }
+	    80% { right:510px; z-index:6; }
+	    81% { right:510px; z-index:6; }
+	    100%{ right:510px; z-index:6; }
+    }
+
+    @-webkit-keyframes cyclefives {
+	    0%  { right:510px; z-index:4; }
+	    76% { right:0px; z-index:-1; }
+	    77% { right:0px; z-index:4; }
+	    80% { right:0px; z-index:4; }
+	    84% { right:0px; z-index:4; }
+	    96% { right:0px; z-index:4; }
+	    100%{ right:510px; z-index:4; }
+    }
+
+    @-moz-keyframes cycless {
+	    0%  { right:0px; z-index:12; }
+	    4%  { right:0px; z-index:12; } 
+	    16% { right:0px; z-index:12; } 
+	    20% { right:250px; z-index:12; }   
+	    21% { right:250px; z-index:12; }
+	    70% { right:250px; z-index:12; }
+	    71% { right:250px; z-index:2; }
+	    72% { right:0px; z-index:2; }
+	    97% { right:0px; z-index:2; }
+	    100%{ right:0px; z-index:2; }
+	
+    }
+
+    @-moz-keyframes cycletwoss {
+	    0%  { right:0px; z-index:-1; }
+	    16% { right:0px; z-index:-1; }
+	    17% { right:0px; z-index:10; }
+	    20% { right:0px; z-index:10; }
+	    24% { right:0px; z-index:10; }
+	    36% { right:0px; z-index:10; }
+	    40% { right:250px; z-index:10; }
+	    41% { right:250px; z-index:10; }
+	    100%{ right:250px; z-index:10; }
+    }
+
+    @-moz-keyframes cyclethreess {
+	    0%  { right:0px; z-index:-1; }
+	    36% { right:0px; z-index:-1; }
+	    37% { right:0px; z-index:8; }
+	    40% { right:0px; z-index:8; }
+	    44% { right:0px; z-index:8; }
+	    56% { right:0px; z-index:8; }
+	    60% { right:250px; z-index:8; }
+	    61% { right:250px; z-index:8; }
+	    100%{ right:250px; z-index:8; }
+    }
+
+    @-moz-keyframes cyclefourss {
+	    0%  { right:0px; z-index:-1; }
+	    56% { right:0px; z-index:-1; }
+	    57% { right:0px; z-index:8; }
+	    60% { right:0px; z-index:6; }
+	    64% { right:0px; z-index:6; }
+	    76% { right:0px; z-index:6; }
+	    80% { right:250px; z-index:6; }
+	    81% { right:250px; z-index:6; }
+	    100%{ right:250px; z-index:6; }
+    }
+
+    @-moz-keyframes cyclefivess {
+	    0%  { right:250px; z-index:4; }
+	    76% { right:0px; z-index:-1; }
+	    77% { right:0px; z-index:4; }
+	    80% { right:0px; z-index:4; }
+	    84% { right:0px; z-index:4; }
+	    96% { right:0px; z-index:4; }
+	    100%{ right:250px; z-index:4; }
+    }
+
+    @-webkit-keyframes cycless {
+	    0%  { right:0px; z-index:12; }
+	    4%  { right:0px; z-index:12; } 
+	    16% { right:0px; z-index:12; } 
+	    20% { right:250px; z-index:12; }   
+	    21% { right:250px; z-index:12; }
+	    70% { right:250px; z-index:12; }
+	    71% { right:250px; z-index:2; }
+	    72% { right:0px; z-index:2; }
+	    97% { right:0px; z-index:2; }
+	    100%{ right:0px; z-index:2; }
+    }
+
+    @-webkit-keyframes cycletwoss {
+	    0%  { right:0px; z-index:-1; }
+	    16% { right:0px; z-index:-1; }
+	    17% { right:0px; z-index:10; }
+	    20% { right:0px; z-index:10; }
+	    24% { right:0px; z-index:10; }
+	    36% { right:0px; z-index:10; }
+	    40% { right:250px; z-index:10; }
+	    41% { right:250px; z-index:10; }
+	    100%{ right:250px; z-index:10; }
+    }
+
+    @-webkit-keyframes cyclethreess {
+	    0%  { right:0px; z-index:-1; }
+	    36% { right:0px; z-index:-1; }
+	    37% { right:0px; z-index:8; }
+	    40% { right:0px; z-index:8; }
+	    44% { right:0px; z-index:8; }
+	    56% { right:0px; z-index:8; }
+	    60% { right:250px; z-index:8; }
+	    61% { right:250px; z-index:8; }
+	    100%{ right:250px; z-index:8; }
+    }
+
+    @-webkit-keyframes cyclefourss {
+	    0%  { right:0px; z-index:-1; }
+	    56% { right:0px; z-index:-1; }
+	    57% { right:0px; z-index:8; }
+	    60% { right:0px; z-index:6; }
+	    64% { right:0px; z-index:6; }
+	    76% { right:0px; z-index:6; }
+	    80% { right:250px; z-index:6; }
+	    81% { right:250px; z-index:6; }
+	    100%{ right:250px; z-index:6; }
+    }
+
+    @-webkit-keyframes cyclefivess {
+	    0%  { right:250px; z-index:4; }
+	    76% { right:0px; z-index:-1; }
+	    77% { right:0px; z-index:4; }
+	    80% { right:0px; z-index:4; }
+	    84% { right:0px; z-index:4; }
+	    96% { right:0px; z-index:4; }
+	    100%{ right:250px; z-index:4; }
+    }
+
+/* ANIMATION BAR */
+@-moz-keyframes fullexpands {
+    0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+    4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.3; }
+   16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+   17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.3; }
+   18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
+}
+@-webkit-keyframes fullexpands {
+    0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+    4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.3; }
+   16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+   17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.3; }
+   18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
+}
+
+@-moz-keyframes fullexpand {
+    0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+    4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.3; }
+   16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+   17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.3; }
+   18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
+}
+@-webkit-keyframes fullexpand {
+    0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+    4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.3; }
+   16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+   17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.3; }
+   18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
+}

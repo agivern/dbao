@@ -1,0 +1,586 @@
+  /*******************************/
+ /***** CSS du site de DBAO *****/
+/*******************************/
+
+  /*************************/
+ /* généralisation du css */
+/**************************/
+*
+{
+    font-family: Arial;
+    font-size: 12px;
+}
+
+p
+{
+    margin:0px;
+}
+
+::-moz-selection {
+	background: #90ee02;
+	color: white;
+}
+
+a
+{
+    outline: none;
+}
+
+body
+{
+    background-color: #e7e7e7;
+}
+
+  /****************/
+ /* logo du site */
+/****************/
+div.titre
+{
+    background-image: url(../images/DBAO_header.jpg);
+    background-repeat: no-repeat;
+    float: left;
+    height: 200px;
+    transition: transform 2s;
+}
+
+div.logo
+{
+    margin-top: 55px;
+    height: 35px;
+    width: 118px;
+    display: inline-block;
+}
+
+div.star
+{
+    height: 15px;
+    width: 15px;
+    background-image: url(../images/star.png);
+    background-repeat: no-repeat;
+    transition: transform 0.25s;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+div.star:hover
+{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+div.creative
+{
+    margin-top: -4px;
+    height: 69px;
+    width: 200px;
+    display: inline-block;
+}
+
+div.titreHeader
+{
+    margin-top: 10px;
+    height: 20px;
+    font-family: 'helveticabold';
+    font-size: 40px;
+    line-height: 20px;
+    margin-left: -2px;
+}
+
+  /****************/
+ /* menu du site */
+/****************/
+nav
+{
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+#lien_menu
+{
+    border-bottom: 1px solid black;
+    height: 22px;
+    margin-right: 10px;
+    text-decoration: none;
+    float: left;
+    width: 120px;
+    font-weight: bold;
+    color: black;
+}
+
+#lien_menu.left
+{
+    margin-left: 0px;
+}
+
+#lien_menu.ouvrant
+{
+    transition: height 0.25s, margin-top 0.25s;
+    overflow: hidden;
+}
+
+#lien_menu.ouvrant:hover
+{
+    cursor: default;
+    overflow: hidden;
+    height: 62px;
+    margin-top:-20px;
+}
+
+#lien_menu ul
+{
+    display: none;
+}
+
+#lien_menu:hover ul
+{
+    display: inline;
+    overflow: hidden;
+}
+
+#lien_menu:hover
+{
+    border-bottom: 1px solid #7bc800;
+    color: #7bc800;
+    cursor: pointer;
+}
+
+ul.subMenu a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ul.subMenu li
+{
+    padding-top: 5px;
+}
+
+#menuMobile
+{
+    width: 250px;
+    height: 25px;
+    display: none;
+}
+
+#page.general {
+    background-color: white;
+    box-shadow: 1px 1px 5px rgb(212, 212, 212);
+}
+
+@media (min-width: 1190px) {
+
+    #page {
+        width: 1190px;
+        margin: auto;
+        margin-top: 0px;
+    }
+
+    header
+    {
+        margin-top: -8px;
+        width: 1030px;
+        height: 220px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    div.titre
+    {
+        width: 520px;
+    }
+
+    nav
+    {
+        float: right;
+        width: 510px;
+    }
+
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+
+    #page {
+        width: 590px;
+        margin: auto;
+    }
+
+    header
+    {
+        margin-top: -8px;
+        width: 510px;
+        height: 280px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    div.titre
+    {
+        width: 510px;
+        height: 230px;
+    }
+
+    nav
+    {
+        float: left;
+        margin-top: -10px;
+        width: 510px;
+    }
+}
+
+@media (max-width: 589px) {
+
+    #page
+    {
+        width: 290px;
+        margin: auto;
+    }
+
+    header
+    {
+        margin-top: -8px;
+        width: 125px;
+        height: 340px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    div.titre
+    {
+        width: 250px;
+        height: 250px;
+    }
+
+    nav
+    {
+        float: left;
+        width: 250px;
+        margin-top: -20px;
+    }
+    
+    #lien_menu
+    {
+        margin-bottom: 15px;
+    }
+
+    #lien_menu.ouvrant
+    {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    
+    #lien_menu.agence
+    {
+        margin-left: 0px;
+    }
+ 
+    #menuOrdi
+    {
+        display:none;
+    }
+
+    #menuMobile
+    {
+        display: block;
+    }
+}
+
+  /**********************/
+ /* Contenu de la page */
+/**********************/  
+#contenu {
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+@media (min-width: 1190px) {
+    #contenu {
+        width: 1030px;
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    #contenu {
+        width: 510px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 589px) {
+    #contenu {
+        width: 250px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+/******************************************************/
+/* Pied des pages */
+/******************************************************/
+footer
+{
+    color: #999999;
+}
+
+#img_footer
+{
+    margin-top: 20px;
+    background-image: url(../images/DBAO_footer.jpg);
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+#footer_contact
+{
+    display: inline-block;
+    float: left;
+    color: #999999;
+    width: 250px;
+}
+
+#footer_contact.bold
+{
+    font-weight: bold;
+    margin-top: 20px;
+    width: 190px;
+}
+
+#footer_contact.bold a
+{
+    text-decoration: none;
+    color: #999999;
+}
+
+#footer_picto
+{
+    width: 45px;
+    height: 82px;
+    background: url("../images/GOOGLE-grey.png");
+    float: right;
+    transition: background 1s;
+}
+
+#footer_picto:hover
+{
+    background: url("../images/GOOGLE-green.png");
+}
+
+#navigation_menu
+{
+    width: 510px;
+    margin-top: -10px;
+    padding-bottom: 200px;
+}
+
+#navigation_menu li
+{
+    width: 120px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+#navigation_menu a
+{
+    color: #999999;
+}
+
+#navigation_menu a:hover
+{
+    text-decoration:underline
+}
+
+#footer_menu
+{
+    display: inline-block;
+    float: left;
+    width: 120px;
+    margin-right: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #999999;
+}
+
+#footer_lien
+{
+    width: 250px;
+    display: inline-block;
+    float: left;
+}
+
+#footer_lien a
+{
+    font-weight: bold;
+    color: #9bdb0e;
+    text-decoration: none;
+}
+
+@media (min-width: 1190px) {
+    #pied_de_page {
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+
+    #footer_contact
+    {
+        margin-right: 10px;
+    }
+
+    #footer_lien
+    {
+        margin-right: 10px;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    #pied_de_page {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    #footer_contact
+    {
+        margin-right: 10px;
+    }
+    
+    #footer_lien
+    {
+        margin-top: 50px;
+    }
+    
+    #navigation_menu
+    {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 589px) {
+    #pied_de_page {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    #footer_lien
+    {
+        margin-top: 20px;
+    }
+
+    #navigation_menu
+    {
+        width : 260px;
+    }
+    
+    #footer_menu
+    {
+        margin-top: 20px;
+    }
+} 
+  /***********************/
+ /* Rubrique en général */
+/***********************/
+
+#titre_rubrique {
+    margin-top: 70px;
+    font-family: 'helveticabold';
+    font-size: 40px;
+    margin-bottom: 40px;
+    height: 56px;
+    line-height: 10px;
+}
+
+#rubrique_image
+{
+    height: 150px;
+    width: 250px;
+    margin-bottom: -3px;
+}
+
+#rubrique_titre
+{
+    font-weight : bold;
+    height: 25px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    line-height: 25px;
+    vertical-align: middle;
+    width: 240px;
+}
+
+@media (min-width: 1190px) {
+    #titre_rubrique {
+        margin-top: 90px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    #titre_rubrique {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 589px) {
+    #titre_rubrique {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+}
+
+/******************/
+/* Liens d'accès */
+/****************/
+
+#lien_acces
+{
+    display: inline-block;
+    border-bottom: 1px solid #c1c1c1;
+    padding-left: 10px;
+    width: 240px;
+    font-weight: normal;
+    vertical-align: middle;
+    height: 22px;
+    text-decoration: none;
+    color: #7c7c7c;
+}
+
+#lien_acces p
+{
+    color: #9bdb0e;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    display: inline;
+    transition: font-size 0.25s, padding-left 0.25s;
+}
+
+#lien_acces:hover p
+{
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+#lien_acces:hover
+{
+    cursor: pointer;
+}
+
+#lien_acces.lienHeader
+{
+    border-bottom: 0px;
+    color: #9bdb0e;
+    margin-top: -15px;
+    padding-left: 0px;
+}

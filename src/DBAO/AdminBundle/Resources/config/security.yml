@@ -1,0 +1,37 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_manager
+
+    firewalls:
+        main:
+            pattern:      .*
+            form_login:
+                provider:       fos_userbundle
+                login_path:     /dbao/admin/login
+                use_forward:    false
+                check_path:     /dbao/admin/login_check
+                failure_path:   null
+                default_target_path: /dbao/admin/index
+            logout:
+                path:   /dbao/admin/logout
+                target: /dbao/admin/login
+            anonymous:    true
+
+    access_control:
+        - { path: /login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /profile, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /admin/index, role: ROLE_USER }
+        - { path: /admin/news$, role: ROLE_USER }
+        - { path: /admin/slider$, role: ROLE_USER }
+        - { path: /admin/realisations$, role: ROLE_USER }
+        - { path: /admin/clients$, role: ROLE_USER }
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN

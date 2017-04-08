@@ -1,0 +1,390 @@
+  /************************************************/
+ /***** CSS de l'agence du site de DBAO *****/
+/************************************************/
+
+@import url("animation2.css") screen;
+
+#slider
+{
+    margin-bottom: 50px;
+}
+
+#minSlider {
+    margin-bottom: 50px;
+}
+
+#mask {
+	overflow:hidden;
+	height:100%;
+}
+
+#slider ul {
+	margin:0;
+	padding:0;
+	position:relative;
+}
+
+#slider li {
+	position:absolute;
+	right:-1030px;
+	list-style:none;
+}
+
+#minSlider li {
+	position:absolute;
+	right:-250px;
+	list-style:none;
+}
+
+#minSlider ul {
+	margin:0;
+	padding:0;
+	position:relative;
+}
+
+.progress-bar { 
+	position:relative;
+	top:-3px;
+    height:3px;
+	background:#8ff100;
+	z-index: 15;
+}
+
+@media (min-width: 1190px) {
+    #slider li.firstanimation {
+	    -moz-animation:cycle 20s linear infinite;	
+	    -webkit-animation:cycle 20s linear infinite;
+    }
+
+    #slider li.secondanimation {
+	    -moz-animation:cycletwo 20s linear infinite;
+	    -webkit-animation:cycletwo 20s linear infinite;		
+    }
+    
+    #slider:hover li, 
+    #slider:hover .progress-bar {
+	    -moz-animation-play-state:paused;
+	    -webkit-animation-play-state:paused;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    #slider li.firstanimation {
+	    -moz-animation:cycles 20s linear infinite;	
+	    -webkit-animation:cycles 20s linear infinite;
+    }
+
+    #slider li.secondanimation {
+	    -moz-animation:cycletwos 20s linear infinite;
+	    -webkit-animation:cycletwos 20s linear infinite;		
+    }
+}
+
+@media (max-width: 589px) {
+    #minSlider li.firstanimation {
+	    -moz-animation:cycless 10s linear infinite;	
+	    -webkit-animation:cycless 10s linear infinite;
+    }
+
+    #minSlider li.secondanimation {
+	    -moz-animation:cycletwoss 10s linear infinite;
+	    -webkit-animation:cycletwoss 10s linear infinite;		
+    }
+}
+
+#slider:hover li, 
+#slider:hover .progress-bar {
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+
+#minSlider:hover li, 
+#minSlider:hover .progress-bar {
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+
+.slideTitre { 
+	width:1030px;
+	height: 25px;
+	background-color: black;
+	color: white;
+	padding-left: 10px;
+    padding-top: 3px;
+    font-weight: bold;
+}
+
+#slider img {
+    margin-bottom: -3px;
+}
+    
+#minSlider img {
+    margin-bottom: -3px;
+}
+
+@media (min-width: 1190px) {
+    #slider {
+        width: 1030px;
+        height: 350px;
+    }
+
+    #slider img {
+        width: 1030px;
+        height: 325px;
+    }
+
+    #minSlider
+    {
+        display: none;
+    }
+
+    .slideTitre
+    {
+        width: 1020px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    #slider {
+        width: 510px;
+        height: 185px;
+    }
+
+    #slider img {
+        width: 510px;
+        height: 160px;
+    }
+
+    #minSlider
+    {
+        display: none;
+    }
+
+    .slideTitre
+    {
+        width: 500px;
+    }
+}
+
+@media (max-width: 589px) {
+    #slider
+    {
+        display: none;
+    }
+
+    #minSlider {
+        width: 250px;
+        height: 185px;
+    }
+
+    #minSlider img {
+        width: 250px;
+        height: 160px;
+    }
+
+    .slideTitre
+    {
+        width: 240px;
+    }
+}
+
+
+  /**********************/
+ /* en-tête de contact */
+/**********************/
+p.phraseAgence
+{
+    font-family: 'open_sanscondensed_light';
+    text-transform : uppercase;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+#personnel {
+    float: left;
+    width: 100%;
+}
+
+.perso {
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+}
+.name {
+    width: 250px;
+}
+
+.nomPerso {
+    font-family: 'open_sanscondensed_light';
+    font-size: 22px;
+    color: black;
+    line-height: 18px;
+}
+
+.statutPerso {
+    font-family: Arial;
+    font-weight: bold;
+    color: #9bdb0e;
+    line-height: 18px;
+}
+
+.fonctionPerso {
+    font-family: Arial;
+    color: #818181;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.imagePerso {
+    width: 250px;
+    height: 250px;
+}
+
+.phrasePerso {
+    font-family: Arial;
+    color: #818181;
+    font-size: 12px;
+    line-height: 18px;
+    width: 250px;
+}
+
+#texteAgence {
+    float: left;
+    width: 100%;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 18px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+#texteAgence p {
+    text-align: justify;
+}
+
+#metier {
+    margin-top: 15px;
+    width: 50%;
+    color: #818181;
+}
+
+p.titreMetier {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p.titreExpertise {
+    font-family: 'open_sanscondensed_light';
+    text-transform : uppercase;
+    font-size: 22px;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid #c1c1c1;
+    height: 30px;
+}
+
+#picto
+{
+    float: left;
+    height: 18px;
+    padding: 5px 0px 0px 25px;
+    background-repeat: no-repeat;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+#picto.strategie
+{
+    background-image:url(../images/Picto_strategie-lite.png);
+}
+
+#picto.design
+{
+    background-image:url(../images/Picto_design-lite.png);
+}
+
+#picto.developpement
+{
+    background-image:url(../images/Picto_developpement-lite.png);
+}
+
+#picto.motion
+{
+    background-image:url(../images/Picto_3Dmotion-lite.png);
+}
+
+#line {
+    width: 100%;
+    height: 1px;
+    background-color: #c1c1c1;
+    margin-top: 40px;
+}
+  /*********************************/
+ /* responsive de la page agence */
+/*********************************/
+@media (min-width: 1190px) {
+    p.phraseAgence {
+        padding-left: 520px;
+        width: 50%;
+    }
+
+    #personnel {
+        float: left;
+        width: 50.5%;
+    }
+  
+    #texteAgence {
+        float: right;
+        width: 49.5%;
+        margin-bottom: 0px;
+    }
+
+    .name {
+        margin-bottom: 25px;
+        float: right;
+    }
+
+    .imagePerso {
+        float: left;
+    }
+
+    .phrasePerso {
+        float: right;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 1189px) {
+    p.phraseAgence {
+        width: 100%;
+    }
+    
+    .name {
+        margin-bottom: 25px;
+        float: right;
+    }
+
+    .imagePerso {
+        float: left;
+    }
+
+    .phrasePerso {
+        float: right;
+    }
+}
+
+@media (max-width: 589px) {
+    #metier {
+        width: 100%;
+    }
+    
+    .name {
+        margin-bottom: 10px;
+    }
+
+    .imagePerso {
+        margin-bottom: 10px;
+    }
+
+}
