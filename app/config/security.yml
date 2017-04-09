@@ -1,2 +1,0 @@
-imports:
-    - { resource: "@DBAOAdminBundle/Resources/config/security.yml" }
